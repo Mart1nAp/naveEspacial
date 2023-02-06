@@ -21,9 +21,9 @@ para comprobar que ya funciona correctamente nos ubicamos en el directorio raíz
 
 ya con la base importada y el comando ejecutado no habría problema para iniciar.
 
-##Guia:
+## Guia:
 
-!([Video guia:](https://www.youtube.com/watch?v=ZC_wu2lAu8o))
+![Video Guia:](https://www.youtube.com/watch?v=ZC_wu2lAu8o)
 
 
 
