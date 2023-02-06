@@ -21,5 +21,7 @@ def busqueda(request):
     nacionalidad = Nave.objects.filter(nacionalidad__icontains=busnav)
     anoLanza = Nave.objects.filter(ano_lanza__icontains=busnav)
     combustible = Nave.objects.filter(combustible__icontains=busnav)
+    utilidad = Nave.objects.filter(utilidad__icontains=busnav)
+    activa = Nave.objects.filter(activa__icontains=busnav)
     # retorna la busqueda y se muestran en el inicio.html
-    return render(request, 'inicio.html', {'res': naves | nacionalidad | anoLanza | combustible ,'naves': naves | nacionalidad | anoLanza | combustible})
+    return render(request, 'inicio.html', {'res': naves | nacionalidad | anoLanza | combustible | utilidad | activa ,'naves': naves | nacionalidad | anoLanza | combustible | utilidad | activa})

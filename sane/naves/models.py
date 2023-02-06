@@ -14,6 +14,8 @@ class Nave(models.Model):
     nacionalidad = models.CharField(max_length=200)
     ano_lanza = models.CharField(max_length=200)
     combustible = models.CharField(max_length=200)
+    utilidad = models.CharField(max_length=200, null=True)
+    activa = models.BooleanField(null=True, blank=True)
 
     def __str__(self):
-        return f'Nave {self.id}: {self.tipo} {self.nombre} {self.nacionalidad} {self.ano_lanza} {self.combustible}'
+        return f'Nave {self.id}: {self.tipo} {self.nombre} {self.nacionalidad} {self.ano_lanza} {self.combustible} {self.utilidad} {self.activa}'
