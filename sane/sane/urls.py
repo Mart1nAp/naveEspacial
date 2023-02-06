@@ -13,7 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns, static
 from django.urls import path
 
 from naves.views import detalleNave, nuevaNave
@@ -25,4 +27,9 @@ urlpatterns = [
     path('detalle_nave/<int:id>', detalleNave),
     path('nueva_nave/', nuevaNave),
     path('busqueda/', busqueda, name = 'busqueda'),
+    path('busqueda/detalle_nave/<int:id>', detalleNave),
+
 ]
+# este metodo se agrego para que se puedan visualizar correctamente las imagenes
+urlpatterns +=staticfiles_urlpatterns()
+urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

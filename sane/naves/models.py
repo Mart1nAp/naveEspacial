@@ -1,6 +1,7 @@
 from django.db import models
 
-# Create your models here.
+# Estos son los modelos que van a aparecer en el area de administrador de django
+# Se agregan los metodos __str__ para que los datos se puedan visualizar correctamente
 class Tipo(models.Model):
     tipo_nave = models.CharField(max_length=259)
     def __str__(self):
@@ -8,6 +9,7 @@ class Tipo(models.Model):
 
 class Nave(models.Model):
     tipo = models.ForeignKey(Tipo, on_delete=models.SET_NULL, null=True)
+    imagen = models.ImageField(upload_to='imagenes', null=True, blank=True)
     nombre = models.CharField(max_length=200)
     nacionalidad = models.CharField(max_length=200)
     ano_lanza = models.CharField(max_length=200)
