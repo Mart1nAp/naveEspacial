@@ -20,8 +20,9 @@
             <div class="col-md-6 col-lg-8" >
                 <div class="card mx-30" >
             <div class="table table-borderless" border="1">
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 <table> {{formaNave}}</table>
+
             <button class="btn btn-outline-success my-2 my-sm-0" type='submit'>Enviar</button>
                 <a href="{% url 'inicio' %}"><button class="btn btn-outline-success my-2 my-sm-0">Regresar al inicio </a>
             {% csrf_token %}

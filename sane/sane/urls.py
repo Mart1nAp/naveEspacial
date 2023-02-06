@@ -30,6 +30,6 @@ urlpatterns = [
     path('busqueda/detalle_nave/<int:id>', detalleNave),
 
 ]
-# este metodo se agrego para que se puedan visualizar correctamente las imagenes
+# este metodo se genera para que se puedan visualizar correctamente las media
 urlpatterns +=staticfiles_urlpatterns()
 urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

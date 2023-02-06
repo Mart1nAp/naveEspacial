@@ -16,7 +16,9 @@
             <div class="align-center" >
                 <div class="col-md-6 col-lg-4" >
                     <div class="card mx-30" >
+                        {% if nave.imagen %}
                       <img src={{nave.imagen.url}} class="card-img-top" alt="..." >
+                        {% endif %}
                       <div class="card-body">
                         <h5 class="card-title">{{nave.nombre}}</h5>
                             <h6><div>Id nave: {{nave.id}}</div>

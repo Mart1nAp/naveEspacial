@@ -6,7 +6,7 @@ from django.db.models import Q
 from naves.models import Nave
 
 
-# Create your views here. Estas vistas se refieren a la direccion que va a aparecer en
+# Estas vistas se refieren a la direccion que va a aparecer en
 # la barra del navegador al momento de que haya interaccion con estas funciones.
 def detalleNave(request, id):
     nave = Nave.objects.get(pk=id)
@@ -16,7 +16,7 @@ NaveForm = modelform_factory(Nave, exclude=[])
 
 def nuevaNave(request):
     if request.method == 'POST':
-        formaNave = NaveForm(request.POST)
+        formaNave = NaveForm(request.POST, files=request.FILES)
         if formaNave.is_valid():
             formaNave.save()
             return redirect('inicio')
