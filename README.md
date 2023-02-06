@@ -1,6 +1,6 @@
 # Nave Espacial
 
-El proyecto nave espacial esta desarrollado en su mayoria en Python apoyado del framework Django, para el frond se utilizo html con boostrap.
+El proyecto nave espacial esta desarrollado en su mayoria en Python apoyado del framework Django, para el fronted se utilizo html con boostrap.
 
 ## Instlaciones
 
